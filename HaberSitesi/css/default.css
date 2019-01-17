@@ -1,0 +1,37 @@
+body {
+    background-color: rgba(234, 240, 240, 0.788);
+    background-image:url("../images/bg.jpg");
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    height: 75px;
+    background-color: black;
+    margin: 0px;
+    padding: 4px;
+}
+
+.logo {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.521);
+    border-radius: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+
+.box {
+    height: 350px;
+    width: 370px;
+    float: left;
+    background-color: rgba(35,35,42,0.985);
+    box-shadow: 1px -1px 5px rgba(0, 0, 0, 0.521);
+    margin: 29px;
+    margin-top: 75px;
+    border-radius: 5px;
+    color: rgb(233, 233, 233);
+    font-size: large;
+    font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    padding: 10px;
+}

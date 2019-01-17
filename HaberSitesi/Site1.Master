@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="HaberSitesi.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+	<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+	<title><%:Page.Title %> - World's News Point</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+		<!-- HEADER -->
+		<header style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+		<div id="logo">
+			<a href="Home.aspx"><img src="images/logo.png" alt="logo" id="img-logo"/></a>
+		</div>
+			<!-- dil değiştirme butonları -->
+		<p>
+			<asp:ImageButton ID="ImageButtonEn" class="flag" ImageUrl="images/flag-399.png" OnClick="ImageButtonEn_Click" runat="server" />
+			<asp:ImageButton ID="ImageButtonTr" class="flag" ImageUrl="images/flag-400.png" OnClick="ImageButtonTr_Click" runat="server" />
+			<asp:ImageButton ID="ImageButtonFr" class="flag" ImageUrl="images/flag-401.png" OnClick="ImageButtonFr_Click" runat="server" />
+		</p>
+			<!-- üye girişi ve diğer işlemler için multiview -->
+			<asp:MultiView ID="MultiView1" runat="server">
+				<asp:View ID="ViewSign" runat="server">
+					<!--üye girişi yapılmazsa çalışacak view-->
+					<asp:Panel ID="Panel1" runat="server" DefaultButton="BtnLogin">
+					<div class="view">
+						<asp:Label ID="LblUsr" runat="server" Text="username:"></asp:Label>
+						<asp:TextBox ID="TxtUsr" runat="server"></asp:TextBox>
+						<asp:Label ID="LblPass" runat="server" Text="password:"></asp:Label>
+						<asp:TextBox ID="TxtPass" runat="server" TextMode="Password"></asp:TextBox>
+						<asp:Button ID="BtnLogin" runat="server" Text="Login" OnClick="BtnLogin_Click"/>
+						<asp:Button ID="BtnSignUp" runat="server" Text="Sign Up" OnClick="BtnSignUp_Click"/>
+					</div>
+						</asp:Panel>
+						</asp:View>
+				<!--üye normal üye ise-->
+				<asp:View ID="ViewUsr" runat="server">
+					<div class="view">
+						<asp:Label ID="LblHelloUsr" runat="server" Text="Hello User"></asp:Label>!
+						<asp:Button ID="BtnSettings" runat="server" Text="Settings" OnClick="BtnSettings_Click"/>
+						<asp:Button ID="BtnLogout" runat="server" Text="Logout" OnClick="BtnLogout_Click"/>
+					</div>
+				</asp:View>
+				<!--üye editör ise çalışacak view-->
+				<asp:View ID="ViewEdt" runat="server">
+					<div class="view">
+						<asp:Label ID="LblHelloEdt" runat="server" Text="Welcome User"></asp:Label>!
+						<asp:Button ID="BtnSettingsE" runat="server" Text="Settings" OnClick="BtnSettings_Click"/>
+						<asp:Button ID="BtnAddNews" runat="server" Text="Add News" OnClick="BtnAddNews_Click"/>
+						<asp:Button ID="BtnLogoutE" runat="server" Text="Logout" OnClick="BtnLogout_Click"/>
+					</div>
+				</asp:View>
+			</asp:MultiView>
+	</header>
+	<nav>
+		<asp:Button ID="BtnWorld" style="font-family: 'Cinzel', serif; font-weight: bold" runat="server" Text="World" OnClick="BtnWorld_Click"/>
+		<asp:Button ID="BtnBusiness" style="font-family: 'Cinzel', serif; font-weight: bold" runat="server" Text="Business" OnClick="BtnBusiness_Click"/>
+		<asp:Button ID="BtnTech" style="font-family: 'Cinzel', serif; font-weight: bold" runat="server" Text="Technology" OnClick="BtnTech_Click"/>
+		<asp:Button ID="BtnScience" style="font-family: 'Cinzel', serif; font-weight: bold" runat="server" Text="Science" OnClick="BtnScience_Click"/>
+		<asp:Button ID="BtnHealth" style="font-family: 'Cinzel', serif; font-weight: bold" runat="server" Text="Health" OnClick="BtnHealth_Click"/>
+		<asp:Button ID="BtnVideo" style="font-family: 'Cinzel', serif; font-weight: bold" runat="server" Text="Video" OnClick="BtnVideo_Click"/>
+		<asp:Button ID="BtnSport" style="font-family: 'Cinzel', serif; font-weight: bold" runat="server" Text="Sport" OnClick="BtnSport_Click"/>
+	</nav>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+		<!-- CONTENT -->
+		</asp:ContentPlaceHolder>
+    </div>
+		<!-- FOOTER -->
+		<footer style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+		<p>&copy; <%: DateTime.Now.Year %> - World's News Point</p><hr />
+		<ul>
+				<li><a href="Home.aspx"><asp:Label ID="LblHome" runat="server" Text="HOME"></asp:Label></a></li>
+				<li><a href="About.aspx"><asp:Label ID="LblAbout" runat="server" Text="ABOUT"></asp:Label></a></li>
+				<li><a href="Contact.aspx"><asp:Label ID="LblContact" runat="server" Text="CONTACT"></asp:Label></a></li>
+		</ul><hr />
+		<p>
+			<a href="#"><img src="images/fb.png" alt="fb" class="social"/></a>
+			<a href="#"><img src="images/rss.png" alt="rss" class="social"/></a>
+			<a href="#"><img src="images/tw.png" alt="tw" class="social"/></a>
+			<a href="#"><img src="images/wp.png" alt="whatsapp" class="social"/></a>
+			<a href="#"><img src="images/yt.png" alt="youtube" class="social"/></a>
+			<a href="#"><img src="images/ins.png" alt="instagram" class="social"/></a>
+		</p>
+		</footer>
+    </form>
+</body>
+</html>

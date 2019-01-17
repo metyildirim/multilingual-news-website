@@ -1,0 +1,35 @@
+.catBox{
+	background-color: rgb(250,250,250);
+	float: left;
+	height: 300px;
+	width: 300px;
+	border-radius: 5px;
+	margin: 10px;
+	margin-top: 15px;
+	margin-right: 5px;
+	padding: 10px;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.521);
+	overflow:hidden;
+	text-align: center;
+}
+
+.catBoxImg {
+	height: 175px;
+	width: 300px;
+}
+
+.catBoxImg:hover {
+	height: 225px;
+}
+
+.catBox:hover {
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.800);
+}
+
+.catHead {
+	font-size: 20px;
+}
+
+.catDesc {
+	font-size: 12px;
+}

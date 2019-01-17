@@ -1,0 +1,89 @@
+* {box-sizing: border-box;}
+	.mySlides {display: none;}
+	img {vertical-align: middle;}
+
+	/* Slideshow container */
+	.slideshow-container {
+	  max-width: 900px;
+	  position: relative;
+	}
+
+	/* Caption text */
+	.text {
+	  color: white;
+	  font-size: 22px;
+	  background-color: rgba(255, 0, 0, 0.800);
+	  padding: 8px 12px;
+	  position: absolute;
+	  bottom: 8px;
+	  width: 100%;
+	  text-align: center;
+	}
+
+	/* The dots/bullets/indicators */
+	.dot {
+	  height: 15px;
+	  width: 15px;
+	  margin: 0 2px;
+	  background-color: #bbb;
+	  border-radius: 50%;
+	  display: inline-block;
+	  transition: background-color 0.6s ease;
+	}
+
+	.active {
+	  background-color: #717171;
+	}
+
+	/* Fading animation */
+	.fade {
+	  -webkit-animation-name: fade;
+	  -webkit-animation-duration: 1.5s;
+	  animation-name: fade;
+	  animation-duration: 1.5s;
+	}
+
+	@-webkit-keyframes fade {
+	  from {opacity: .4} 
+	  to {opacity: 1}
+	}
+
+	@keyframes fade {
+	  from {opacity: .4} 
+	  to {opacity: 1}
+	}
+
+	.tmWorld{
+    background-color: rgba(0, 102, 255, 0.808);
+    color: white;
+}
+
+.tmBusiness{
+    background-color: rgba(22, 198, 211, 0.808);
+    color: white;
+}
+
+.tmTech{
+    background-color: rgba(204, 0, 255, 0.815);
+    color: white;
+}
+
+.tmScience{
+    background-color: rgba(88, 96, 99, 0.815);
+    color: white;
+}
+
+.tmHealth{
+    background-color: rgba(114, 194, 56, 0.815);
+    color: white;
+}
+
+.tmVideo{
+    background-color: rgba(219, 16, 16, 0.815);
+    color: white;
+}
+
+.tmSport{
+    background-color: rgba(223, 137, 24, 0.808);
+    color: white;
+}
