@@ -1,5 +1,5 @@
-# multilingual-news-website-aspnet-form
-this project was my news-website project for web programming lecture
+# multilingual-news-website
+A multilingual news website developed with ASP.NET Web Forms
 
 Languages Supported
 ----------------
